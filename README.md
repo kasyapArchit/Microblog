@@ -1,7 +1,8 @@
 A basic blogging app (learn flask usign this app)<br>
-Using flask<br>
+Learning how to use flask<br>
 Flask uses Jinja2 for templates<br>
-Use virtual environment.
+Using Werkzeug for hashing<br>
+Using virtual environment.
 
 # Some commands:
 1. python3 -m venv venv (virtual environment)
@@ -14,3 +15,4 @@ Use virtual environment.
 8. app.config contains the configurations of the frameworks as a configuration variable
 9. pip install flask-sqlalchemy (database)
 10. pip install flask-migrate (database migration)
+11. pip install flask-login (different functionalities which help in user log-in)

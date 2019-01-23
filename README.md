@@ -16,3 +16,4 @@ Using virtual environment.
 9. pip install flask-sqlalchemy (database)
 10. pip install flask-migrate (database migration)
 11. pip install flask-login (different functionalities which help in user log-in)
+12. export FLASK_DEBUG=1 (for debugging mode and reloader)

@@ -17,3 +17,5 @@ Using virtual environment.
 10. pip install flask-migrate (database migration)
 11. pip install flask-login (different functionalities which help in user log-in)
 12. export FLASK_DEBUG=1 (for debugging mode and reloader)
+13. flask db migrate -m \<comment\> (make changes in the database)
+14. flask db upgrade (migration)

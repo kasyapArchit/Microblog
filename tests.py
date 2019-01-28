@@ -19,13 +19,13 @@ class UserModelCase(unittest.TestCase):
         self.assertTrue(u.check_password('cat'))
 
     def test_avatar(self):
-        u = User(username='john', email='john@example.com')
+        u = User(username='archit', email='architastitva@gmail.com')
         self.assertEqual(u.avatar(128), ('https://www.gravatar.com/avatar/'
-                                         'd4c74594d841139328695756648b6bd6'
+                                         'a9f01ac12f0547fd9a0c8b0ba9544640'
                                          '?d=identicon&s=128'))
 
     def test_follow(self):
-        u1 = User(username='john', email='john@example.com')
+        u1 = User(username='archit', email='architastitva@gmail.com')
         u2 = User(username='susan', email='susan@example.com')
         db.session.add(u1)
         db.session.add(u2)
@@ -39,7 +39,7 @@ class UserModelCase(unittest.TestCase):
         self.assertEqual(u1.followed.count(), 1)
         self.assertEqual(u1.followed.first().username, 'susan')
         self.assertEqual(u2.followers.count(), 1)
-        self.assertEqual(u2.followers.first().username, 'john')
+        self.assertEqual(u2.followers.first().username, 'archit')
 
         u1.unfollow(u2)
         db.session.commit()
@@ -49,7 +49,7 @@ class UserModelCase(unittest.TestCase):
 
     def test_follow_posts(self):
         # create four users
-        u1 = User(username='john', email='john@example.com')
+        u1 = User(username='archit', email='architastitva@gmail.com')
         u2 = User(username='susan', email='susan@example.com')
         u3 = User(username='mary', email='mary@example.com')
         u4 = User(username='david', email='david@example.com')
@@ -57,7 +57,7 @@ class UserModelCase(unittest.TestCase):
 
         # create four posts
         now = datetime.utcnow()
-        p1 = Post(body="post from john", author=u1,
+        p1 = Post(body="post from archit", author=u1,
                   timestamp=now + timedelta(seconds=1))
         p2 = Post(body="post from susan", author=u2,
                   timestamp=now + timedelta(seconds=4))
@@ -69,8 +69,8 @@ class UserModelCase(unittest.TestCase):
         db.session.commit()
 
         # setup the followers
-        u1.follow(u2)  # john follows susan
-        u1.follow(u4)  # john follows david
+        u1.follow(u2)  # archit follows susan
+        u1.follow(u4)  # archit follows david
         u2.follow(u3)  # susan follows mary
         u3.follow(u4)  # mary follows david
         db.session.commit()

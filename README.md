@@ -1,4 +1,4 @@
-A basic blogging app (learn flask usign this app)<br>
+# A basic blogging app<br>
 Learning how to use flask<br>
 Flask uses Jinja2 for templates<br>
 Using Werkzeug for hashing<br>
@@ -19,3 +19,6 @@ Using virtual environment.
 12. export FLASK_DEBUG=1 (for debugging mode and reloader)
 13. flask db migrate -m \<comment\> (make changes in the database)
 14. flask db upgrade (migration)
+
+# Refrence:
+https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world

@@ -1,10 +1,18 @@
-# A basic blogging app<br>
-Learning how to use flask<br>
-Flask uses Jinja2 for templates<br>
-Using Werkzeug for hashing<br>
-Using virtual environment.
+# Microblog
+A blogging application with following features:
+1. Allows user to log in and out.<br>
+2. Register new users.<br>
+3. Password recovery.<br>
+4. Users can post blogs.<br>
+5. User profile page containing their bio(user bio, last seen, followers, users followed).<br>
+6. Post by users followed(pagination that allows going back and forth the list).
+7. Able to see all the posts made by other users.<br>
+8. Follow other users.
+9. Search posts.
+10. Translate blogs in different language.
+11. Send private message to others.
 
-# Some commands:
+# Some commands and extensions used:
 1. python3 -m venv venv (virtual environment)
 2. virtualenv venv (for python2; first install virtualenv)
 3. source venv/bin/activate (activate venv)
@@ -19,6 +27,4 @@ Using virtual environment.
 12. export FLASK_DEBUG=1 (for debugging mode and reloader)
 13. flask db migrate -m \<comment\> (make changes in the database)
 14. flask db upgrade (migration)
-
-# Refrence:
-https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+15. Use jinja2 to render templates.
